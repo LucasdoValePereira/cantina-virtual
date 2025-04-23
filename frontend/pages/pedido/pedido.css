@@ -1,0 +1,91 @@
+body{
+    margin: 0px;
+    font-family: "Epilogue", Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+.header{
+    background-color: #EAEAEA;
+    height: 10%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.fatec-logo{
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+.botao-menu{
+    background-color: #B90404;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 3px;
+    gap: 7px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-family: "Epilogue", Arial, Helvetica, sans-serif;
+}
+
+.botao-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.botao-menu:hover {
+    background-color: #ff6262;
+    transition: background-color 0.3s;
+}
+
+.botao-admin{
+    background-color: #b5b5b5;
+    border: none;
+    border-radius: 3px;
+    font-family: "Epilogue", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    padding: 8px 10px;
+}
+
+.botao-admin:hover{
+    background-color: #7b7b7b;
+    transition: background-color 0.3s;
+}
+
+.description{
+    width: 100%;
+    min-height: 240px;
+    background-image: url("../../assets/restaurante.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.description p {
+    max-width: 30%;
+    line-height: 1.5;
+    margin: 0; 
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.container{
+    padding: 20px;
+    background-color: #EAEAEA;
+}

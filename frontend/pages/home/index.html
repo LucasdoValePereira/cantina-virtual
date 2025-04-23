@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantina Virtual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <button class="botao-admin">
+            Admin
+        </button>
+        <img src="../../assets/fatec-logo.png" alt="Fatec" class="fatec-logo">
+        <button class="botao-pedido">Pedido
+            <img src="../../assets/carrinho.png" alt="carrinho" class="botao-icon">
+        </button>
+    </div>
+
+    <div class="description">
+        <h1>Bem vindo à cantina virtual</h1>
+        <p>Como faço meu pedido? É simples, escolha os itens aqui abaixo, adicione-os ao carrinho, e depois confirme seu
+            pedido e pague. Você receberá uma senha para retirar seu pedido na cantina.</p>
+    </div>
+
+    <div class="container">
+        <div class="produto-card">
+            <img src="../../assets/produto/salgado.png" alt="salgado" class="produto-img">
+            <h3 class="produto-nome">Salgado</h3>
+            <p class="produto-preco">R$ 7</p>
+            <button class="botao-adicionar" onclick="adicionarItem('Salgado', 7.0)">Adicionar</button>
+        </div>
+        <div class="produto-card">
+            <img src="../../assets/produto/bombom.jpg" alt="bombom" class="produto-img">
+            <h3 class="produto-nome">Bombom</h3>
+            <p class="produto-preco">R$ 3</p>
+            <button class="botao-adicionar" onclick="adicionarItem('Bombom', 3.0)">Adicionar</button>
+        </div>
+        <div class="produto-card">
+            <img src="../../assets/produto/bebidas.jpg" alt="bebidas" class="produto-img">
+            <h3 class="produto-nome">Bebidas</h3>
+            <p class="produto-preco">R$ 7</p>
+            <button class="botao-adicionar" onclick="adicionarItem('Bebidas', 7.0)">Adicionar</button>
+        </div>
+        <div class="produto-card">
+            <img src="../../assets/produto/pao-de-mel.jpg" alt="pao de mel" class="produto-img">
+            <h3 class="produto-nome">Pão de mel</h3>
+            <p class="produto-preco">R$ 4</p>
+            <button class="botao-adicionar" onclick="adicionarItem('Pão de mel', 4.0)">Adicionar</button>
+        </div>
+        <div class="produto-card">
+            <img src="../../assets/produto/salgadinho.png" alt="salgadinho" class="produto-img">
+            <h3 class="produto-nome">Salgadinho</h3>
+            <p class="produto-preco">R$ 6</p>
+            <button class="botao-adicionar" onclick="adicionarItem('Salgadinho', 6.0)">Adicionar</button>
+        </div>
+        <div class="produto-card">
+            <img src="../../assets/produto/chiclete.png" alt="chiclete" class="produto-img">
+            <h3 class="produto-nome">Chiclete</h3>
+            <p class="produto-preco">R$ 2</p>
+            <button class="botao-adicionar" onclick="adicionarItem('Chiclete', 2.0)">Adicionar</button>
+        </div>
+    </div>
+</body>
+
+</html>
