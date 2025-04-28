@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantina Virtual</title>
+    <title>Pedido</title>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="pedido.css">
-    <script src="pedido.css"></script>
 </head>
 
 <body>
@@ -17,20 +16,23 @@
             Admin
         </button>
         <img src="../../assets/fatec-logo.png" alt="Fatec" class="fatec-logo">
-        <button class="botao-menu">Menu
-            <img src="../../assets/carrinho.png" alt="carrinho" class="botao-icon">
-        </button>
+        <a href="../home/index.html">
+            <button class="botao-menu">Menu
+                <img src="../../assets/carrinho.png" alt="carrinho" class="botao-icon">
+            </button>
+        </a>
     </div>
 
-    <div class="description">
+    <div id="description">
         <h1>Pedido</h1>
         <p>Aqui você vê todos os itens escolhidos, você pode removê-los ou confirmar o pedido e gerar a senha.</p>
     </div>
 
-    <div class="container">
-        
-        </div>
+    <div id="container"></div>
+    <div id="finalizarCompra">Se todos os itens do seu pedido estiverem certo, clique abaixo para concluir a compra e gerar a senha para retirar o lanche na cantina
+        <button id="botaoSenha">Pegar Senha</button>
     </div>
+    <script src="pedido.js"></script>
 </body>
 
 </html>

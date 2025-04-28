@@ -1,11 +1,19 @@
-let pedidos = [];
+let pedido = [];
 
-function adicionarItem(item, preco){
-    pedidos.push({item, preco})
-    console.log(item + " adicionado")
+const pedidoSalvo = sessionStorage.getItem("Pedido");
+if (pedidoSalvo) {
+    pedido = JSON.parse(pedidoSalvo);
 }
 
-function mostrarPedidos(){
-    console.log(pedidos)
+function adicionarItem(item, preco){
+    pedido.push({item, preco})
+    console.log(item + " adicionado")
+    
+    sessionStorage.setItem("Pedido", JSON.stringify(pedido))
+    mostrarPedido()
+}
+
+function mostrarPedido(){
+    console.log(pedido)
 }
 
