@@ -28,3 +28,41 @@ function removerItem(botao){
     }
     sessionStorage.setItem("Pedido", JSON.stringify(dados));
 }
+
+async function pegarSenha(){
+    const dados = sessionStorage.getItem("Pedido");
+    if(!dados){
+        console.error("Nenhum dados encontrado");
+        return;
+    }
+
+    const pedido = {
+        itens: JSON.parse(dados)
+    }
+
+    try{
+        const response = await fetch("http://localhost:3000/pedidos/gerar-senha", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(pedido)
+        });
+
+        if(!response.ok){
+            throw new Error(`Erro ao gerar senha: ${response.status}`);
+        }
+        
+        const resultado = await response.json();
+        console.log("Senha gerada:", resultado);
+        var senha = document.getElementById("senha");
+        senha.innerText = `A senha é : ${resultado.senha}`;
+
+        setTimeout(()=>{
+            sessionStorage.removeItem("Pedido");
+            window.location.href = "../home/index.html";
+        }, 10000);
+    }catch(err){
+        console.error(`Erro ao enviar pedido:`, err);
+    }    
+}
