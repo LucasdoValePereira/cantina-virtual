@@ -1,10 +1,11 @@
 async function entrar(){
-    var usuario = document.getElementById("usuario").value;
-    var senha = document.getElementById("senha").value;
+    var usuario = document.getElementById("usuario");
+    var senha = document.getElementById("senha");
+    var menssagem = document.getElementById("message");
 
     var dados = {
-        usuario,
-        senha
+        usuario: usuario.value,
+        senha: senha.value
     };
 
     try{
@@ -17,7 +18,11 @@ async function entrar(){
         });
 
         if(!response.ok){
+            usuario.value = "";
+            senha.value = "";
+            menssagem.innerText= "Usuário ou senha estão incorretos"
             throw new Error("Senha ou usuario errado ",response.status);
+            
         }
 
         const resultado = await response.json();

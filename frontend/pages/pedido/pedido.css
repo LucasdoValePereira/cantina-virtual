@@ -152,3 +152,7 @@ body{
 #botaoSenha:hover {
     background-color: #13ff2b;
 }
+
+a{
+    text-decoration: none;
+}

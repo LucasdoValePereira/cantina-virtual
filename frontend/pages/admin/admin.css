@@ -1,0 +1,56 @@
+body{
+    margin: 0px;
+    font-family: "Epilogue", Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+.header{
+    background-color: #EAEAEA;
+    height: 10%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.fatec-logo{
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+.item{
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-left: 5px solid #e73333;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.item ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.item ul li {
+    padding: 6px 0;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+.item ul li:last-child {
+    border-bottom: none;
+}

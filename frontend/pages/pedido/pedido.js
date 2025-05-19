@@ -5,7 +5,7 @@ window.onload = () => {
         const div = document.getElementById("container");
     
         div.innerHTML = `
-            ${pedido.map(p => `<div id="item">
+            ${pedido.map(p => `<div class="item">
                 <h2>${p.item} - R$${p.preco}</h2>
                 <button id="botaoRemover" onclick="removerItem(this)">Remover</button>
               </div>`).join("")}
@@ -58,10 +58,13 @@ async function pegarSenha(){
         var senha = document.getElementById("senha");
         senha.innerText = `A senha é : ${resultado.senha}`;
 
+        var div = document.getElementById('container');
+        div.innerHTML = "";
+        sessionStorage.clear();
         setTimeout(()=>{
             sessionStorage.removeItem("Pedido");
             window.location.href = "../home/index.html";
-        }, 10000);
+        }, 5000);
     }catch(err){
         console.error(`Erro ao enviar pedido:`, err);
     }    
