@@ -25,4 +25,16 @@ const listarPedidos = asyncHandler(async(req,res)=>{
     res.json(pedidos);
 })
 
-module.exports = {criarPedido, listarPedidos};
+const alterarStatus = asyncHandler(async(req,res)=>{
+    const pedido = await Pedido.findByPk(req.params.id);
+    if(!pedido){
+        res.status(400);
+        throw new Error('Não tem pedido');
+    }
+
+    pedido.usado = true;
+    await pedido.save();
+    res.json({ mensagem: 'Status atualizado com sucesso', pedido });
+})
+
+module.exports = {criarPedido, listarPedidos, alterarStatus};

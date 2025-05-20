@@ -54,3 +54,20 @@ body{
 .item ul li:last-child {
     border-bottom: none;
 }
+
+#botaoAlterar {
+    margin-top: 12px;
+    padding: 10px 16px;
+    background-color: #e73333;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#botaoAlterar:hover {
+    background-color: #cc2c2c;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
